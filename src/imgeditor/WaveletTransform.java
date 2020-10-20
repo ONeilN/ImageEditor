@@ -2,10 +2,10 @@ package imgeditor;
 
 public class WaveletTransform {
 
-    private static double w0 = 0.5;
-    private static double w1 = -0.5;
-    private static double s0 = 0.5;
-    private static double s1 = 0.5;
+    private static double w0 = 0.5; //0.5
+    private static double w1 = -0.5; // -0.5
+    private static double s0 = 0.5; // 0.5
+    private static double s1 = 0.5; // 0.5
 
     /**
      * Прямое одномерное вейвлет-преобразование
@@ -19,7 +19,7 @@ public class WaveletTransform {
         for (int i = 0; i < h; i++) {
 
             int k = (i << 1);
-            System.out.println("k" + i + ": " + k);
+            System.out.println("k " + i + " : " + k);
             temp[i] = data[k] * s0 + data[k + 1] * s1;
             temp[i + h] = data[k] * w0 + data[k + 1] * w1;
         }
